@@ -6,7 +6,13 @@
 - MiCuartaMAcro
 - WebAyuntamiento
 
-#### 01.bas
+#### 01-Variables.bas
+Creación de variables de diferentes tipos
+
+#### 02-Operadores.bas
+Ejemplos de uso de operadores
+
+#### 03-Estructuras.bas
 - RecogidaTexto
 - SentenciaIF
 - Edad
