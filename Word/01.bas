@@ -1,4 +1,4 @@
-Attribute VB_Name = "Módulo3"
+Attribute VB_Name = "01"
 Sub RecogidaTexto()
 '
 '       Solicita al usuario una cadena de texto
