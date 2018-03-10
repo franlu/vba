@@ -1,6 +1,5 @@
-Attribute VB_Name = "E00"
+Attribute VB_Name = "00"
 Sub MiPrimeraMacro()
-Attribute MiPrimeraMacro.VB_ProcData.VB_Invoke_Func = "Project.NewMacros.MiPrimeraMacro"
 '
 ' MiPrimeraMacro Macro
 '   Escribe un nombre en color rojo
