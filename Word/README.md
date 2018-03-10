@@ -5,3 +5,11 @@
 - MiTerceraMAcro
 - MiCuartaMAcro
 - WebAyuntamiento
+
+#### 01.bas
+- RecogidaTexto
+- SentenciaIF
+- Edad
+- BucleFor
+- MostrarMensaje
+- TransponerPalabraDerecha
