@@ -27,5 +27,10 @@ Ejemplos de uso de operadores
 #### 04-EstructuraDeControl.bas
 
 #### 05-Vectores.bas
+- **MiPrimerArray:** Ejemplo de uso de un vector
+- **RedimensionarArray:** Redimensiona un vector y muestra su contenido en un mensaje.
+- **PreservarArray:** Rediminsiona un vector preservando su contenido.
+- **RecorrerArray:** Imprime el contenido de un vector en un documento de word.
+
 #### 06-Procedimientos.bas
 #### 07-Funciones.bas
