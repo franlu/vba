@@ -23,7 +23,6 @@ Sub SelectionWith()
 '       las propiedades del objeto Selection antes de escribirlo
 '       en el documento.
 '
-	Dim numero As Byte
 	Dim texto As String
 	
 	texto = InputBox("¿Qué quieres que escriba?", "Recogida de texto")
