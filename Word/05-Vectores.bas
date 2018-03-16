@@ -11,6 +11,10 @@ Sub MiPrimerArray()
 
     'Acceso
     MsgBox miArray(0) & " " & miArray(1) & " " & miArray(2)
+	
+	'Limites
+	MsgBox UBound(miArray)
+	MsgBox LBound(miArray)
 
 End Sub
 
