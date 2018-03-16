@@ -13,9 +13,9 @@ Creación de variables de diferentes tipos
 Ejemplos de uso de operadores
 
 #### 03-EstructuraCondicional.bas
-- **Ejemplo1:**Ejemplo de uso de la estructura condicional simple.
-- **Ejemplo2:**Ejemplo de uso de la estructura condicional.
-- **Ejemplo3:**Ejemplo de uso de la estructura condicional anidada.
+- **Ejemplo1:** Ejemplo de uso de la estructura condicional simple.
+- **Ejemplo2:** Ejemplo de uso de la estructura condicional.
+- **Ejemplo3:** Ejemplo de uso de la estructura condicional anidada.
 - **RecogidaTexto:** Solicita al usuario una cadena de texto la escribe y hace un retorno de carro (Intro).
 - **MayorEdad:** Muestra un mensaje diciendo si eres mayor de edad o no.	
 - **Edad:** Muestra un mensaje en función de la edad introducida.
