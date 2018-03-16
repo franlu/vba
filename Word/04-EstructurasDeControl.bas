@@ -19,9 +19,9 @@ End Sub
 
 Sub SelectionWith()
 '
-'       Solicita al usuario un numero y un texto
-'       a continuacion escribe el texto el numero de veces
-'       que indique el usuario.
+'       Solicita al usuario una cadena texto y establece
+'       las propiedades del objeto Selection antes de escribirlo
+'       en el documento.
 '
 	Dim numero As Byte
 	Dim texto As String
@@ -35,6 +35,9 @@ Sub SelectionWith()
 		.ParagraphFormat.Alignment = wdAlignParagraphCenter
 		.ParagraphFormat.SpaceAfter = 0
 	End With
+	
+	Selection.TypeText Text:=texto
+	Selection.TypeParagraph
 	
 End Sub
 
