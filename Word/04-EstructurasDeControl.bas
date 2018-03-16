@@ -11,11 +11,39 @@ Sub BucleFor()
 	
 	numero = InputBox("¿Dí el numero de veces que quieres que lo escriba?", "Nº de Veces")
 	texto = InputBox("¿Qué quieres que escriba?", "Recogida de texto")
-		
 		For I = 1 To numero
 			Selection.TypeText Text:=texto
 			Selection.TypeParagraph
 		Next
+End Sub
+
+Sub SelectionWith()
+'
+'       Solicita al usuario un numero y un texto
+'       a continuacion escribe el texto el numero de veces
+'       que indique el usuario.
+'
+	Dim numero As Byte
+	Dim texto As String
+	
+	texto = InputBox("¿Qué quieres que escriba?", "Recogida de texto")
+	
+	With Selection
+		.Font.Bold = True
+		.Font.Name = "Arial"
+		.Font.ColorIndex = wdDarkBlue
+		.ParagraphFormat.Alignment = wdAlignParagraphCenter
+		.ParagraphFormat.SpaceAfter = 0
+	End With
+	
+End Sub
+
+Sub ForToNext()
+  Dim fila As Integer
+  For contador = 1 To 10
+    fila = contador
+  Next
+  MsgBox "Se alcanzó el valor " & fila
 End Sub
 
 Sub DoLoopUntil()
@@ -52,14 +80,6 @@ Sub WhileWend()
     a = a + 1
   Wend
   MsgBox "Se alcanzó el valor " & a
-End Sub
-
-Sub ForToNext()
-  Dim fila As Integer
-  For contador = 1 To 10
-    fila = contador
-  Next
-  MsgBox "Se alcanzó el valor " & fila
 End Sub
 
 Sub InfiniteLoop()
