@@ -6,12 +6,16 @@ Sub BucleFor()
 '       a continuacion escribe el texto el numero de veces
 '       que indique el usuario.
 '
-        numero = InputBox("¿Dí el numero de veces que quieres que lo escriba?", "Nº de Veces")
-        texto = InputBox("¿Qué quieres que escriba?", "Recogida de texto")
-                For I = 1 To numero
-                Selection.TypeText Text:=texto
-                Selection.TypeParagraph
-                Next
+	Dim numero As Byte
+	Dim texto As String
+	
+	numero = InputBox("¿Dí el numero de veces que quieres que lo escriba?", "Nº de Veces")
+	texto = InputBox("¿Qué quieres que escriba?", "Recogida de texto")
+		
+		For I = 1 To numero
+			Selection.TypeText Text:=texto
+			Selection.TypeParagraph
+		Next
 End Sub
 
 Sub MostrarMensaje()
