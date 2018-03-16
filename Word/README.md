@@ -1,10 +1,10 @@
 # VBA Word 2007
-#### 00.bas
-- MiPrimeraMacro
-- MiSegundaMacro
-- MiTerceraMAcro
-- MiCuartaMAcro
-- WebAyuntamiento
+#### 00-Grabadora-macros.bas
+- **MiPrimeraMacro:** Escribe un nombre en color rojo. Fuente: Verdana. Negrita. Cursiva. Tamaño 14.
+- **MiSegundaMacro:** Insertar un WordArt.
+- **MiTerceraMacro:** Escribe un nombre completo. Fuente: Arial. Color: Azul Oscuro. Negrita. Subrayado.
+- **MiCuartaMacro:** Inserta una tabla. Inserta la fecha en una celda cualquiera. Centrar el contenido de la celda. Aplicar dobles bordes sobre esa celda.
+- **WebAyuntamiento:** Inserta un hipervinculo a la web del ayuntamiento de tu municipio
 
 #### 01-Variables.bas
 Creación de variables de diferentes tipos
