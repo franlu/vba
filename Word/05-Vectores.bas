@@ -99,8 +99,47 @@ Sub RellenarAleatorio()
 End Sub
 
 Sub Euromillon()
-'Genera una combiancion de numeros aleatorios  para el juego del euromillon
-Int((6 * Rnd) + 1)    ' Generate random value between 1 and 6
+'Genera una combianción de numeros aleatorios  para el juego del euromillon.
+'Muestra un mensaje por cada número.
+ Dim numeros(4) As Byte
+ Dim estrellas(1) As Byte
+  
+ For i=0 To Ubound(numeros)
+	numeros(i) = (50 * Rnd)+1
+	MsgBox numeros(i)
+ Next
+ 
+ mensaje = mensaje & " Estrellas: "
+ For i=0 To Ubound(estrellas)
+	estrellas(i) = (12 * Rnd)+1
+	MsgBox estrellas(i)
+ Next
+ 
+End Sub
+
+Sub Euromillon1()
+'
+'Genera una combiancion para el juego del euromillon.
+'La combinación se muestra en la misma ventana de mensaje.
+'
+ Dim numeros(4) As Byte
+ Dim estrellas(1) As Byte
+ Dim mensaje As String 
+ 
+	 mensaje = "Números: "
+	 For i=0 To Ubound(numeros)
+		numeros(i) = (50 * Rnd)+1
+		mensaje = mensaje & numeros(i) & " "
+	 Next
+	 
+	 mensaje = mensaje & " Estrellas: "
+	 For i=0 To Ubound(estrellas)
+		estrellas(i) = (12 * Rnd)+1
+		mensaje = mensaje & estrellas(i) & " "
+	 Next
+	 
+ MsgBox mensaje
+ 
 End Sub
 
 Sub Buscar()

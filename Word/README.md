@@ -33,6 +33,8 @@ Ejemplos de uso de operadores
 - **PreservarArray:** Rediminsiona un vector preservando su contenido.
 - **RecorrerArray:** Imprime el contenido de un vector en un documento de word.
 - **RellenarAleatorio:** Rellena el vector con numeros aleatorios, el tamaño del vector lo indica el usuario. Uso de la funcion **Rnd**.
+- **Euromillon:** Genera una combianción de numeros aleatorios  para el juego del euromillon. Muestra un mensaje por cada número.
+- **Euromillon1:** Genera una combiancion para el juego del euromillon. *La combinación se muestra en la misma ventana de mensaje*.
 
 #### 06-Procedimientos.bas
 #### 07-Funciones.bas
