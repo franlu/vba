@@ -82,8 +82,20 @@ Sub recorrerArray()
 End Sub
 
 Sub RellenarAleatorio()
-' Rellena el vector con numeros aleatorios
-' Funcion Rnd
+'
+' Rellena el vector con numeros aleatorios, tamaño del vector lo indica el usuario.
+' Uso de la funcion Rnd
+'
+	Dim tamanio As Byte
+	tamanio = InputBox("Escribe el tamaño del vector (entre 0 y 255)", "Rellenar Vector")
+	
+	ReDim vector(tamanio) As Double
+       
+    For i = 0 To UBound(vector)
+        vector(i) = Rnd
+        MsgBox "Posición: " & i & " y su " & "contenido es: " & vector(i)
+    Next
+		
 End Sub
 
 Sub Euromillon()

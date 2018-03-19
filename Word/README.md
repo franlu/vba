@@ -32,6 +32,7 @@ Ejemplos de uso de operadores
 - **RedimensionarArray:** Redimensiona un vector y muestra su contenido en un mensaje.
 - **PreservarArray:** Rediminsiona un vector preservando su contenido.
 - **RecorrerArray:** Imprime el contenido de un vector en un documento de word.
+- **RellenarAleatorio:** Rellena el vector con numeros aleatorios, el tamaño del vector lo indica el usuario. Uso de la funcion **Rnd**.
 
 #### 06-Procedimientos.bas
 #### 07-Funciones.bas
