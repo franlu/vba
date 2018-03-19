@@ -116,3 +116,17 @@ Sub WebAyuntamiento()
         "http://www.granada.org", SubAddress:="", ScreenTip:="", TextToDisplay:= _
         "http://www.granada.org"
 End Sub
+
+Sub TransponerPalabraDerecha()
+'
+'       Traspone una palabra hacia la derecha
+'
+        'Tecla F8 selecciona una palabra
+        Selection.Extend
+        Selection.Extend
+        Selection.EscapeKey
+        Selection.Cut
+        Selection.MoveRight Unit:=wdWord, Count:=1
+        Selection.PasteAndFormat (wdFormatOriginalFormatting)
+        Selection.MoveLeft Unit:=wdWord, Count:=1
+End Sub
