@@ -80,3 +80,20 @@ Sub recorrerArray()
 	    Selection.TypeParagraph
 	Next
 End Sub
+
+Sub RellenarAleatorio()
+' Rellena el vector con numeros aleatorios
+' Funcion Rnd
+End Sub
+
+Sub Euromillon()
+'Genera una combiancion de numeros aleatorios  para el juego del euromillon
+Int((6 * Rnd) + 1)    ' Generate random value between 1 and 6
+End Sub
+
+Sub Buscar()
+'Rellena un vector con numeros aleatorios. Pide al usuario un valor, lo busca dentro del vector.
+'Muestra un mensaje indicando en la posicion que se encuentra.
+End Sub
+
+
