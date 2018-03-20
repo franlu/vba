@@ -1,4 +1,5 @@
 Attribute VB_Name = "Funciones"
+
 Function Resta(Valor1 As Integer, Valor2 As Integer) As Long
 '
 ' Resta los valores pasados como parametros y devuelve el resultado
@@ -6,7 +7,6 @@ Function Resta(Valor1 As Integer, Valor2 As Integer) As Long
     Resta = Valor1 - Valor2
     
 End Function
-
 
 Function Suma(Valor1 As Integer, Valor2 As Integer) As Long
 '
@@ -26,7 +26,7 @@ Sub CalcularTotal()
     a = 1
     b = 1
         
-    MsgBox vbOKOnly + vbInformation + "La suma es " & Suma(a, b)
+    MsgBox "La suma es " & Suma(a, b), vbOKOnly + vbInformation 
 	'vbExclamation
 	'vbCritical
 	'vbQuestion
