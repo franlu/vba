@@ -16,7 +16,7 @@ Function Suma(Valor1 As Integer, Valor2 As Integer) As Long
     
 End Function
 
-Sub CalcularTotal()
+Sub MostrarTotal()
 '
 ' Ejemplo de uso de una función
 '
@@ -26,11 +26,11 @@ Sub CalcularTotal()
     a = 1
     b = 1
         
-    MsgBox "La suma es " & Suma(a, b), vbOKOnly + vbInformation 
-	'vbExclamation
-	'vbCritical
-	'vbQuestion
-	'vbCancel
+    MsgBox "La suma es " & Suma(a, b), vbOKOnly + vbInformation
+	MsgBox "La suma es " & Suma(a, b), vbOKOnly + vbExclamation
+	MsgBox "La suma es " & Suma(a, b), vbOKOnly + vbCritical
+	MsgBox "La suma es " & Suma(a, b), vbOKOnly + vbQuestion
+	
 End Sub
 
 Function Revision(AnioFab As Integer) As String
@@ -42,6 +42,17 @@ Function Revision(AnioFab As Integer) As String
 		Revision = "No"
 	End If
 End Function
+
+Sub UsarFunciones()
+
+	MsgBox Resta(10,5)
+	MsgBox Suma(2,2)
+	
+	Dim resultado As Long
+	resultado = Resta(5,3)
+	MsgBox resultado
+	
+End Sub
 
 'Ejercicios
 '1. Función de tipo integer que recibe 2 parámetros
