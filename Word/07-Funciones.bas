@@ -26,9 +26,22 @@ Sub CalcularTotal()
     a = 1
     b = 1
         
-    MsgBox "La suma es " & Suma(a, b)
-
+    MsgBox vbOKOnly + vbInformation + "La suma es " & Suma(a, b)
+	'vbExclamation
+	'vbCritical
+	'vbQuestion
+	'vbCancel
 End Sub
+
+Function Revision(AnioFab As Integer) As String
+	If AnioFab > Year(Now) Then
+		Revision = "Año incorrecto."
+	ElseIf AnioFab <= Year(Now) - 3 Then
+		Revision = "Sí"
+	Else
+		Revision = "No"
+	End If
+End Function
 
 'Ejercicios
 '1. Función de tipo integer que recibe 2 parámetros

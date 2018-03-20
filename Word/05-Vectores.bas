@@ -144,7 +144,7 @@ End Sub
 
 Sub Buscar()
 'Rellena un vector con numeros aleatorios. Pide al usuario un valor, lo busca dentro del vector.
-'Muestra un mensaje indicando en la posicion que se encuentra.
+'Muestra un mensaje indicando la posicion que se encuentra.
 End Sub
 
 
