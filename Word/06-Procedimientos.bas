@@ -24,6 +24,7 @@ Sub UsarProcedimiento1()
     Call DatosPersonales("Eva", 25, "Granada")
 	Call MayorEdad(20)
 	Call Multiplicar(2,5)
+	Call MostrarMensaje(True, "Esto es una cadena de texto")
 
 End Sub
 
@@ -53,6 +54,15 @@ Sub Multiplicar(n1 As Byte, n2 As Byte)
 
 End Sub
  
+Sub MostrarMensaje(bandera As Boolean, mensaje As String)
+
+	If bandera Then
+		MsgBox mensaje
+	Else
+		MsgBox "La bandera no me permite mostrar el mensaje."
+	End If
+
+End Sub
  
  
  
