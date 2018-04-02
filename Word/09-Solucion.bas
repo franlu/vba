@@ -34,8 +34,8 @@ Sub parteDecimal()
     
     valorDecimal = InputBox("Introduce un valor decimal...")
     
-    pDecimal = valorDecimal - Int(valorDecimal)
-    mensaje = "La parte decimal de " & valorDecimal & "es: " & pDecimal
+    parteDecimal = valorDecimal - Int(valorDecimal)
+    mensaje = "La parte decimal de " & valorDecimal & "es: " & parteDecimal
     
     MsgBox mensaje
     
