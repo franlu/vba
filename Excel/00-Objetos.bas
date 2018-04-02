@@ -1,6 +1,6 @@
 Attribute VB_Name = "Objetos"
 ' Objetos para trabajar con Excel
-'   Aplication
+'   Application
 '   Workbooks
 '   ActiveWorkbook
 '   WorkSheet
@@ -16,6 +16,7 @@ Public Sub Nuevo_libro()
 'Workbooks.Add Template:= "C:\empresa\trabajadores.xlsx"
 'Workbooks.Add Template:=xlWBATChart
 
+'ActiveWorkbook.Save
 'ActiveWorkbook.SaveAs FileName:="Salarios.xlsx”
 
 'Workbooks.Open Filename:= "C:\empresa\inventario.xlsx”
