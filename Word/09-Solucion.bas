@@ -2,7 +2,7 @@ Attribute VB_Name = "Repaso"
 
 Public Sub Circulo()
 '
-' Escriba un programa que pida al usuario el radio de un círculo y muestre un mensaje
+' Pedir al usuario el radio de un círculo y muestrar un mensaje
 ' con su perímetro y su área.
 '
     Const PI As Double = 3.1416
@@ -24,9 +24,23 @@ Public Sub Circulo()
     
 End Sub
 
+Sub parteDecimal()
 '
-' 2. Escriba un programa que entregue la parte decimal de un número real ingresado por el
-'    usuario.
+' Mostrar en un mensaje la parte decimal de un número real introducido por el usuario.
+'
+    Dim valorDecimal As Double
+    Dim parteDecimal As Double
+    Dim mensaje As String
+    
+    valorDecimal = InputBox("Introduce un valor decimal...")
+    
+    pDecimal = valorDecimal - Int(valorDecimal)
+    mensaje = "La parte decimal de " & valorDecimal & "es: " & pDecimal
+    
+    MsgBox mensaje
+    
+End Sub
+
 '
 ' 3. Escriba un programa que pida al usuario dos palabras, y que indique cuál de ellas es
 '    la más larga y por cuántas letras lo es.
