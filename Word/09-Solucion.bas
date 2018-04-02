@@ -41,10 +41,29 @@ Sub parteDecimal()
     
 End Sub
 
+Sub palabras()
 '
-' 3. Escriba un programa que pida al usuario dos palabras, y que indique cuál de ellas es
-'    la más larga y por cuántas letras lo es.
+' Indicar cuál de dos palabras es la más larga y por cuántas letras lo es.
 '
+	Dim palabra1 As String
+	Dim palabra2 As String
+	Dim diferencia As String
+	
+	palabra1 = InputBox("Introduce la primera palabra...")
+	palabra2 = InputBox("Introduce la segunda palabra...")
+	
+	diferencia = Abs(palabra1 - palabra2)
+	
+	If Len(palabra1) > Len(palabra2) Then
+		MsgBox "La primera palabra es mas larga por " & diferencia & " letras."
+	ElseIf Len(palabra1) < Len(palabra2)
+		MsgBox "La segunda palabra es mas larga por " & diferencia & " letras."
+	Else
+		MsgBox "Las dos palabras tienen la misma longitud."
+	End If
+	
+End Sub
+
 ' 4. Escriba un programa que pida peso y altura al usuario. Calcule su IMC.
 '    Muestre un mensaje según la clasificación de la OMS.
 '
