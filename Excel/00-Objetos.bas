@@ -89,7 +89,7 @@ End Sub
 
 Sub Eliminar_hoja()
 ' Eliminar la hoja de un libro
-    Dim miLibro As Workbooks
+    Dim miLibro As Workbook
 	Dim hoja As Worksheet
 	
 	Set miLibro = ActiveWorkbook
