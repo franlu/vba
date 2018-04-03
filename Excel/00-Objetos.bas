@@ -59,7 +59,7 @@ Sub Libro_activo()
 ' Comprobar si hay algún libro abierto
 
     If ActiveWorkbook Is Nothing Then
-        MsgBox "Por favor habrá un nuevo libro antes de usar esta macro." _
+        MsgBox "Por favor crea un nuevo libro antes de usar esta macro." _
         & vbCr & vbCr & "La macro ha finalizado.", _
         vbOKOnly + vbExclamation, "No hay libro abierto."
     End If
@@ -67,14 +67,12 @@ Sub Libro_activo()
 End Sub
 
 Sub Usar_libro_activo()
-' Asignar el nombre del autor al libro activo
+' Mostrar el nombre del libro activo
     
     Dim miLibro As Workbooks
     Set miLibro = ActiveWorkbook
     
-    With miLibro
-       .Creator = "Nombre del autor"
-    End With
+    MsgBox miLibro.Name
 
 End Sub
 
@@ -91,11 +89,15 @@ End Sub
 
 Sub Eliminar_hoja()
 ' Eliminar la hoja de un libro
-    Dim hoja As Worksheet
+    Dim miLibro As Workbooks
+	Dim hoja As Worksheet
+	
+	Set miLibro = ActiveWorkbook
     Set hoja = Workbooks(1).Sheets.Add(before:=Sheets(1))
-    hoja.Name = "Ingresos"
     
+	hoja.Name = "Ingresos"
     miLibro.Sheets("Ingresos").Delete
+	
 End Sub
 
 Sub Anio()
