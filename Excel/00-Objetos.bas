@@ -140,6 +140,40 @@ Sub Anio()
 
 End Sub
 
+Sub AnioV2()
+' Generar un libro con 12 hojas, el nombre de cada hoja es el nombre de los meses del año
+    
+    Dim nhojas As Integer
+    Dim meses(12) As String
+    
+    nhojas = Application.SheetsInNewWorkbook
+       
+    Application.SheetsInNewWorkbook = 12
+    
+    Workbooks.Add
+    ActiveWorkbook.SaveAs Filename:="AnioV2.xlsx"
+    
+    Application.SheetsInNewWorkbook = nhojas
+    
+    meses(0) = "Enero"
+    meses(1) = "Febrero"
+    meses(2) = "Marzo"
+    meses(3) = "Abril"
+    meses(4) = "Mayo"
+    meses(5) = "Junio"
+    meses(6) = "Julio"
+    meses(7) = "Agosto"
+    meses(8) = "Septiembre"
+    meses(9) = "Octubre"
+    meses(10) = "Noviembre"
+    meses(11) = "Diciembre"
+    
+    For i = 1 To ActiveWorkbook.Sheets.Count
+        ActiveWorkbook.Sheets(i).Name = meses(i - 1)
+    Next
+
+End Sub
+
 Sub Celda_Activa()
 ' Mostrar un mensaje con la dirección de la celda activa en el documento activo
     MsgBox ActiveCell.Address
