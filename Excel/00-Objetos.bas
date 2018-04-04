@@ -41,8 +41,18 @@ Sub Nuevo_libro_12_hojas()
     Application.SheetsInNewWorkbook = nhojas
 End Sub
 
-Sub Nuevo_libro_v2(nhojas As Integer)
+Sub Nuevo_libro_v2(nh As Integer)
 'Crea un nuevo libro con un número determinado de hojas
+
+	Dim nh As Integer
+    
+    nhojas = Application.SheetsInNewWorkbook
+       
+    Application.SheetsInNewWorkbook = nh
+    Workbooks.Add
+       
+    Application.SheetsInNewWorkbook = nhojas
+
 End Sub
 
 Sub Guardar_todos_libros()
@@ -59,7 +69,7 @@ Sub Libro_activo()
 ' Comprobar si hay algún libro abierto
 
     If ActiveWorkbook Is Nothing Then
-        MsgBox "Por favor habrá un nuevo libro antes de usar esta macro." _
+        MsgBox "Por favor crea un nuevo libro antes de usar esta macro." _
         & vbCr & vbCr & "La macro ha finalizado.", _
         vbOKOnly + vbExclamation, "No hay libro abierto."
     End If
@@ -67,14 +77,12 @@ Sub Libro_activo()
 End Sub
 
 Sub Usar_libro_activo()
-' Asignar el nombre del autor al libro activo
+' Mostrar el nombre del libro activo
     
     Dim miLibro As Workbooks
     Set miLibro = ActiveWorkbook
     
-    With miLibro
-       .Creator = "Nombre del autor"
-    End With
+    MsgBox miLibro.Name
 
 End Sub
 
@@ -91,15 +99,78 @@ End Sub
 
 Sub Eliminar_hoja()
 ' Eliminar la hoja de un libro
-    Dim hoja As Worksheet
-    Set hoja = Workbooks(1).Sheets.Add(before:=Sheets(1))
-    hoja.Name = "Ingresos"
     
+	Dim miLibro As Workbook
+	Dim hoja As Worksheet
+	
+	Set miLibro = ActiveWorkbook
+    Set hoja = Workbooks(1).Sheets.Add(before:=Sheets(1))
+    
+	hoja.Name = "Ingresos"
     miLibro.Sheets("Ingresos").Delete
+	
 End Sub
 
 Sub Anio()
 ' Generar un libro con 12 hojas, el nombre de cada hoja es el nombre de los meses del año
+	
+	Dim nhojas As Integer
+    
+    nhojas = Application.SheetsInNewWorkbook
+       
+    Application.SheetsInNewWorkbook = 12
+    
+    Workbooks.Add
+    ActiveWorkbook.SaveAs Filename:="Anio.xlsx"
+    
+    Application.SheetsInNewWorkbook = nhojas
+    
+    ActiveWorkbook.Sheets(1).Name = "Enero"
+    ActiveWorkbook.Sheets(2).Name = "Febrero"
+    ActiveWorkbook.Sheets(3).Name = "Marzo"
+	ActiveWorkbook.Sheets(4).Name = "Abril"
+    ActiveWorkbook.Sheets(5).Name = "Mayo"
+    ActiveWorkbook.Sheets(6).Name = "Junio"
+	ActiveWorkbook.Sheets(7).Name = "Julio"
+    ActiveWorkbook.Sheets(8).Name = "Agosto"
+    ActiveWorkbook.Sheets(9).Name = "Septiembre"
+	ActiveWorkbook.Sheets(10).Name = "Octubre"
+    ActiveWorkbook.Sheets(11).Name = "Noviembre"
+    ActiveWorkbook.Sheets(12).Name = "Diciembre"
+
+End Sub
+
+Sub AnioV2()
+' Generar un libro con 12 hojas, el nombre de cada hoja es el nombre de los meses del año
+    
+    Dim nhojas As Integer
+    Dim meses(12) As String
+    
+    nhojas = Application.SheetsInNewWorkbook
+       
+    Application.SheetsInNewWorkbook = 12
+    
+    Workbooks.Add
+    ActiveWorkbook.SaveAs Filename:="AnioV2.xlsx"
+    
+    Application.SheetsInNewWorkbook = nhojas
+    
+    meses(0) = "Enero"
+    meses(1) = "Febrero"
+    meses(2) = "Marzo"
+    meses(3) = "Abril"
+    meses(4) = "Mayo"
+    meses(5) = "Junio"
+    meses(6) = "Julio"
+    meses(7) = "Agosto"
+    meses(8) = "Septiembre"
+    meses(9) = "Octubre"
+    meses(10) = "Noviembre"
+    meses(11) = "Diciembre"
+    
+    For i = 1 To ActiveWorkbook.Sheets.Count
+        ActiveWorkbook.Sheets(i).Name = meses(i - 1)
+    Next
 
 End Sub
 
