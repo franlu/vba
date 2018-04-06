@@ -75,6 +75,25 @@ If completo Then
     
     MsgBox "Gracias por realizar la encuesta", vbInformation, "Fin de la encuesta"
     
+	
+	Sheets(2).Activate
+    
+    ' Limpiar la hoja de Resultados
+    Cells(2, 1) = ""
+    Cells(2, 2) = ""
+    Cells(2, 3) = ""
+    
+    Cells(2, 4) = ""
+    Cells(2, 5) = ""
+    Cells(2, 6) = ""
+    
+    Cells(2, 7) = ""
+    Cells(2, 8) = ""
+    Cells(2, 9) = ""
+    
+    'Limpiar el formulario antes de finalizar
+    Call btnClean_Click
+	
     ufEncuesta1.Hide
     
 End If
