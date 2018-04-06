@@ -23,6 +23,7 @@ End Sub
 Private Sub btnSave_Click()
 
 
+
 Sheets(2).Activate
 'Hoja2.Activate
 
@@ -32,21 +33,50 @@ For Each objeto In fr1.Controls
     End If
 Next
 
-Cells(2, 1) = txtMegusta1.Text
-Cells(2, 2) = txtMegusta2.Text
-Cells(2, 3) = txtMegusta3.Text
+Dim completo As Boolean
+completo = True
 
-Cells(2, 4) = txtNomegusta1.Text
-Cells(2, 5) = txtNomegusta2.Text
-Cells(2, 6) = txtNomegusta3.Text
+For Each objeto In ufEncuesta1.mpEncuesta.Pages(1).Controls
+    If (objeto.Name Like "txt*") Then
+        If (objeto.Text = "") Then
+            MsgBox "Debes rellenar todos los cuadros de texto", vbExclamation, "Atención"
+            completo = False
+            Exit For
+        End If
+    End If
+Next
 
-Cells(2, 7) = txtCambio1.Text
-Cells(2, 8) = txtCambio2.Text
-Cells(2, 9) = txtCambio3.Text
+If completo Then
 
-
-MsgBox "Gracias por realizar la encuesta", vbInformation, "Fin de la encuesta"
-
-ufEncuesta1.Hide
+    Cells(2, 1) = txtMegusta1.Text
+    Cells(2, 2) = txtMegusta2.Text
+    Cells(2, 3) = txtMegusta3.Text
+    
+    Cells(2, 4) = txtNomegusta1.Text
+    Cells(2, 5) = txtNomegusta2.Text
+    Cells(2, 6) = txtNomegusta3.Text
+    
+    Cells(2, 7) = txtCambio1.Text
+    Cells(2, 8) = txtCambio2.Text
+    Cells(2, 9) = txtCambio3.Text
+    
+    Dim fecha As String
+    fecha = Now
+    ' 01/05/2018 10:48:23
+    
+    fecha = Replace(fecha, "/", "-")
+    ' 01-05-2018 10:48:23
+    fecha = Replace(fecha, ":", "-")
+    ' 01-05-2018 10-48-23
+    fecha = Replace(fecha, " ", "-")
+    ' 01-05-2018-10-48-23
+    
+    ActiveWorkbook.SaveAs Filename:="EncuestaAlumno-" & fecha & ".xlsm"
+    
+    MsgBox "Gracias por realizar la encuesta", vbInformation, "Fin de la encuesta"
+    
+    ufEncuesta1.Hide
+    
+End If
 
 End Sub
