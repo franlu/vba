@@ -10,7 +10,7 @@ Sub btnLeer_Haga_clic_en()
     Dim posLongitud As Integer
 
     fichero = Application.GetOpenFilename()
-    ' fichero = "C:\coordenadas.txt"
+    ' fichero = "C:\01-coordenadas.txt"
     
     Open fichero For Input As #1
     
